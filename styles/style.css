@@ -11,8 +11,12 @@ header#header {
 }
 
 .menu-item {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     margin-right: 15px;
+    height: 32px;
+
+    position: relative;
 }
 
 .menu-item * {
@@ -44,6 +48,46 @@ header#header {
     background: url(../assets/avatar.jpg);
     background-position: center;
     background-size: 32px 32px;
+}
+
+.tooltip-container {
+    cursor: initial;
+}
+
+.tooltip-triangle {
+    position: absolute;
+    top: 30px;
+    left: 19%;
+    z-index: 2;
+
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+.tooltip-triangle-backdrop {
+    z-index: 1 !important;
+    top: 29px !important;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.tooltip-body {
+    min-width: 300px;
+    position: fixed;
+    right: 20px;
+    top: 60px;
+    z-index: 1;
+
+    padding: 15px;
+
+    background-color: white;
+
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#tooltip-google-account {
+    display: none;
 }
 
 /* ==================== MAIN CONTENT ============ */

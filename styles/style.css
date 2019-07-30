@@ -1,0 +1,138 @@
+header#header {
+    height: 100%;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 100%;
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.menu-item * {
+    color: black;
+}
+
+.menu-item#google-apps-button {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+
+    background: url(./assets/i2_2ec824b0.png);
+    background-position: 924px 30px;
+    background-size: 528px 68px;
+
+    opacity: 0.6;
+}
+
+.menu-item#google-apps-button:hover {
+    opacity: 1;
+}
+
+.menu-item#google-account-avatar {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: url(./assets/avatar.jpg);
+    background-position: center;
+    background-size: 32px 32px;
+}
+
+/* ==================== MAIN CONTENT ============ */
+section#main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    min-width: 484px;
+}
+
+.search-box-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    min-height: 45px;
+
+    border-radius: 24px;
+    border: 1px solid #dfe1e5;
+}
+
+input#search-input {
+    display: block;
+    width: 80%;
+
+    border: none;
+    outline: none;
+
+    font-size: 1.2em;
+}
+
+#voice-input-button {
+    width: 24px;
+    height: 24px;
+
+    background: url(./assets/googlemic_color_24dp.png);
+    background-size: 24px 24px;
+}
+
+.search-buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-buttons-container .search-button {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* ============ FOOTER ============ */
+footer#footer {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(242, 242, 242);
+}
+
+.footer-bar {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    color: rgba(0, 0, 0, 0.63);
+
+    border-top: 1px solid #e4e4e4;
+}
+
+.footer-bar a {
+    color: inherit;
+
+    margin-right: 15px;
+}
+
+.footer-bar a:last-child {
+    margin-right: 0;
+}
+
+.search-location {
+    flex-grow: 1;
+
+    font-size: 1.1em;
+}
+
+.footer-menu-container {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}

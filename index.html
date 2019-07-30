@@ -1,0 +1,96 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <link rel="stylesheet" href="./styles/template.css" />
+        <link rel="stylesheet" href="./styles/layout.css" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <title>Google Search Remake</title>
+    </head>
+    <body>
+        <div class="container">
+            <header id="header">
+                <div class="menu-container">
+                    <div class="menu-item">
+                        <a href="#">Gmail</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">Images</a>
+                    </div>
+                    <div
+                        id="google-apps-button"
+                        class="menu-item btn-hover"
+                    ></div>
+                    <div id="google-account-avatar" class="menu-item btn-hover">
+                        <a href=""></a>
+                    </div>
+                </div>
+            </header>
+
+            <section id="main-content">
+                <div class="logo-container">
+                    <img src="./assets/google-logo.png" alt="Google Logo" />
+                </div>
+                <div class="search-container">
+                    <form action="https://www.google.com/search" method="GET">
+                        <div class="form-group">
+                            <div class="search-box-container">
+                                <input
+                                    type="text"
+                                    name="q"
+                                    id="search-input"
+                                    autocomplete="off"
+                                />
+                                <div
+                                    id="voice-input-button"
+                                    class="btn-hover"
+                                ></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="search-buttons-container">
+                                <input
+                                    type="submit"
+                                    value="Google Search"
+                                    class="search-button btn"
+                                />
+                                <input
+                                    type="submit"
+                                    value="I'm Feeling Lucky"
+                                    class="search-button btn"
+                                />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="language-container">
+                    <p>
+                        Google offered in: <a href="#">Français</a>
+                        <a href="#">中文（繁體)</a> <a href="#">日本人</a>
+                    </p>
+                </div>
+            </section>
+
+            <footer id="footer">
+                <div class="search-location footer-bar">
+                    <span>England</span>
+                </div>
+                <did class="footer-menu-container footer-bar">
+                    <div id="footer-menu-left">
+                        <a href="#">Advertising</a>
+                        <a href="#">Business</a>
+                        <a href="#">About</a>
+                        <a href="#">How Search works</a>
+                    </div>
+                    <div id="footer-menu-right">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Settings</a>
+                    </div>
+                </did>
+            </footer>
+        </div>
+    </body>
+</html>

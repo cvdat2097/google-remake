@@ -1,0 +1,47 @@
+html,
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-hover:hover {
+    cursor: pointer;
+}
+
+.form-group {
+    margin: 25px 0;
+}
+
+.btn {
+    height: 36px;
+    padding: 0 16px;
+
+    font-size: 14px;
+    color: #5f6368;
+
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+
+    box-sizing: border-box;
+    outline: none;
+}
+
+.btn:hover {
+    border: 1px solid rgb(206, 209, 212);
+    color: black;
+    cursor: pointer;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 1px steelblue;
+}

@@ -24,7 +24,7 @@ header#header {
     height: 30px;
     vertical-align: middle;
 
-    background: url(./assets/i2_2ec824b0.png);
+    background: url(../assets/i2_2ec824b0.png);
     background-position: 924px 30px;
     background-size: 528px 68px;
 
@@ -41,7 +41,7 @@ header#header {
 
     border-radius: 50%;
 
-    background: url(./assets/avatar.jpg);
+    background: url(../assets/avatar.jpg);
     background-position: center;
     background-size: 32px 32px;
 }
@@ -84,7 +84,7 @@ input#search-input {
     width: 24px;
     height: 24px;
 
-    background: url(./assets/googlemic_color_24dp.png);
+    background: url(../assets/googlemic_color_24dp.png);
     background-size: 24px 24px;
 }
 

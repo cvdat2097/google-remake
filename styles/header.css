@@ -54,7 +54,7 @@ header#header {
     position: absolute;
     top: 30px;
     left: 19%;
-    z-index: 2;
+    z-index: 3;
 
     border: 10px solid transparent;
     border-bottom: 10px solid white;

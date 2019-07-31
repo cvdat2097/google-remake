@@ -51,3 +51,63 @@ document
 document
     .getElementsByTagName('body')[0]
     .addEventListener('click', closeAllTootips);
+
+// Google Apps tooltip scrolling
+const showGoogleAppsScrollBar = () => {
+    const tooltip = document.getElementById('google-apps-tooltip-body');
+    const moreButton = document.getElementById('goolge-apps-more');
+
+    tooltip.style.overflowY = 'scroll';
+    moreButton.style.display = 'none';
+};
+
+const hideGoogleAppsScrollBar = () => {
+    const tooltip = document.getElementById('google-apps-tooltip-body');
+    const moreButton = document.getElementById('goolge-apps-more');
+
+    tooltip.style.overflowY = 'hidden';
+    moreButton.style.display = 'block';
+};
+
+const googleAppsWheelHandler = e => {
+    if (e.deltaY > 0) {
+        showGoogleAppsScrollBar();
+    }
+};
+
+const googleAppsScrollHandler = e => {
+    if (e.srcElement.scrollTop === 0) {
+        hideGoogleAppsScrollBar();
+    }
+};
+
+const scrollGoogleAppsToBottom = () => {
+    showGoogleAppsScrollBar();
+    const tooltip = document.getElementById('google-apps-tooltip-body');
+
+    let scrollDelta = 1;
+    let scrollSum = 0;
+
+    const scrollInterval = setInterval(() => {
+        if (scrollSum < tooltip.scrollHeight / 2) {
+            scrollDelta += 10;
+            scrollSum += scrollDelta;
+
+            tooltip.scrollTop = scrollSum;
+        } else {
+            clearInterval(scrollInterval);
+        }
+    }, 10);
+};
+
+document
+    .getElementById('google-apps-tooltip-body')
+    .addEventListener('wheel', googleAppsWheelHandler);
+
+document
+    .getElementById('google-apps-tooltip-body')
+    .addEventListener('scroll', googleAppsScrollHandler);
+
+document
+    .getElementById('goolge-apps-more')
+    .addEventListener('click', scrollGoogleAppsToBottom);

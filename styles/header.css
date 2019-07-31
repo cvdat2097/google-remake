@@ -217,10 +217,21 @@ header#header {
 }
 
 /* ==================== GOOGLE APPS ==================== */
+#google-apps-tooltip-body {
+    max-height: 450px;
+    padding: 0 25px;
+
+    overflow-y: hidden;
+}
+
 .google-apps-container {
     max-width: 284px;
 
-    padding: 35px 25px;
+    padding: 25px 0 35px;
+}
+
+.google-apps-container + .google-apps-container {
+    border-top: 1px solid #f5f5f5;
 }
 
 .google-apps-container a {
@@ -253,11 +264,32 @@ header#header {
     background-position: -10px -10px;
 }
 
-#google-apps-tooltip-body .goolge-apps-more {
+#google-apps-tooltip-body #goolge-apps-more {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 42px;
+
+    z-index: 2;
+}
+
+#google-apps-tooltip-body #goolge-apps-more div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 42px;
+    height: 100%;
 
     background-color: #f2f2f2;
+}
+
+#google-apps-tooltip-body #google-apps-even-more {
+    text-align: center;
+
+    padding-bottom: 20px;
+}
+
+#google-apps-tooltip-body #google-apps-even-more a {
+    color: black;
 }

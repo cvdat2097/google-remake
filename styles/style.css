@@ -28,7 +28,7 @@ header#header {
     background-position: 924px 30px;
     background-size: 528px 68px;
 
-    opacity: 0.6;
+    opacity: 1;
 }
 
 .menu-item#google-apps-button:hover {
@@ -77,6 +77,10 @@ header#header {
 
     border-radius: 2px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#tooltip-google-apps {
+    display: none;
 }
 
 #tooltip-google-account {
@@ -213,7 +217,53 @@ header#header {
     border-color: #c6c6c6;
 }
 
-/* ==================== MAIN CONTENT ============ */
+/* ==================== GOOGLE APPS ==================== */
+.google-apps-container {
+    max-width: 284px;
+
+    padding: 35px 25px;
+}
+
+.google-apps-container a {
+    display: inline-block;
+}
+
+.google-apps-container .google-app {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+
+    border: 1px solid white;
+}
+
+.google-apps-container .google-app:hover {
+    border: 1px solid #ccc;
+}
+
+.google-app .google-app-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    background-image: url('../assets/google-apps/apps.png');
+    background-size: 70px 2937px;
+    background-position: -10px -10px;
+}
+
+#google-apps-tooltip-body .goolge-apps-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+
+    background-color: #f2f2f2;
+}
+
+/* ==================== MAIN CONTENT =================== */
 section#main-content {
     display: flex;
     flex-direction: column;
@@ -227,7 +277,7 @@ section#main-content {
 
 .search-box-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 
     width: 100%;
@@ -235,6 +285,14 @@ section#main-content {
 
     border-radius: 24px;
     border: 1px solid #dfe1e5;
+}
+
+.search-box-container:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-box-container:focus-within {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 input#search-input {

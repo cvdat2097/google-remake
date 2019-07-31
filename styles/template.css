@@ -34,6 +34,7 @@ a {
 
     box-sizing: border-box;
     outline: none;
+    text-align: center;
 }
 
 .btn:hover {
@@ -56,4 +57,13 @@ a {
 
 .btn-primary:hover {
     background-color: #3079ed !important;
+}
+
+.silent-link {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.rounded-border {
+    border-radius: 50%;
 }

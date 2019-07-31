@@ -12,30 +12,19 @@ const closeAllTootips = () => {
     }
 };
 
-const toggleTooltipGoogleAccount = event => {
-    if (!STATE.tooltipGoogleAccount) {
-        const foundTooltipGoogleAccount = document.getElementById(
-            'tooltip-google-account'
-        );
+const toggleTooltipById = (event, tooltipId) => {
+    const foundTooltip = document.getElementById(tooltipId);
 
-        if (!foundTooltipGoogleAccount) {
-            throw new Error('Can not find google account tooltip.');
-        }
-
-        STATE.tooltipGoogleAccount = foundTooltipGoogleAccount;
+    if (!foundTooltip) {
+        throw new Error(`Can not find ${tooltipId}.`);
     }
 
-    const { tooltipGoogleAccount } = STATE;
-
-    if (
-        !tooltipGoogleAccount.style.display ||
-        tooltipGoogleAccount.style.display === 'none'
-    ) {
+    if (!foundTooltip.style.display || foundTooltip.style.display === 'none') {
         closeAllTootips();
 
-        tooltipGoogleAccount.style.display = 'block';
+        foundTooltip.style.display = 'block';
     } else {
-        tooltipGoogleAccount.style.display = 'none';
+        foundTooltip.style.display = 'none';
     }
 
     event.stopPropagation();
@@ -49,7 +38,15 @@ for (const tooltip of tooltipContainers) {
 
 document
     .getElementsByClassName('google-account-avatar')[0]
-    .addEventListener('click', toggleTooltipGoogleAccount);
+    .addEventListener('click', e =>
+        toggleTooltipById(e, 'tooltip-google-account')
+    );
+
+document
+    .getElementById('google-apps-button')
+    .addEventListener('click', e =>
+        toggleTooltipById(e, 'tooltip-google-apps')
+    );
 
 document
     .getElementsByTagName('body')[0]

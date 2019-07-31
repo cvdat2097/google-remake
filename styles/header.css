@@ -166,6 +166,10 @@ header#header {
     border-top: 1px solid #ccc;
 }
 
+.account-list .other-account-link:hover {
+    background-color: #f2f2f2;
+}
+
 .other-account .other-account-avatar {
     display: inline-block;
     height: 48px;

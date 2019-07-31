@@ -48,7 +48,7 @@ for (const tooltip of tooltipContainers) {
 }
 
 document
-    .getElementById('google-account-avatar')
+    .getElementsByClassName('google-account-avatar')[0]
     .addEventListener('click', toggleTooltipGoogleAccount);
 
 document

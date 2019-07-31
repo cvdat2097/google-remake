@@ -9,13 +9,28 @@ section#main-content {
     align-items: center;
 }
 
+.logo-container {
+    margin-bottom: 40px;
+}
+
 .search-container {
     min-width: 484px;
 }
 
+.search-container .form-group {
+    position: relative;
+    margin: 0;
+    min-height: 1px;
+}
+
 .search-box-container {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
     border-radius: 24px;
     border: 1px solid #dfe1e5;
+    background-color: white;
 }
 
 .search-box-container .search-input-container {
@@ -87,6 +102,10 @@ input#search-input {
 
     background: url(../assets/googlemic_color_24dp.png);
     background-size: 24px 24px;
+}
+
+#outter-search-buttons-container {
+    margin-top: 75px;
 }
 
 .search-buttons-container {

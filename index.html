@@ -382,19 +382,59 @@
                     <form action="https://www.google.com/search" method="GET">
                         <div class="form-group">
                             <div class="search-box-container">
-                                <input
-                                    type="text"
-                                    name="q"
-                                    id="search-input"
-                                    autocomplete="off"
-                                />
-                                <div
-                                    id="voice-input-button"
-                                    class="btn-hover"
-                                ></div>
+                                <div class="search-input-container">
+                                    <input
+                                        type="text"
+                                        name="q"
+                                        id="search-input"
+                                        autocomplete="off"
+                                    />
+                                    <div
+                                        id="voice-input-button"
+                                        class="btn-hover"
+                                    ></div>
+                                </div>
+
+                                <div id="search-suggestions-container">
+                                    <hr class="search-suggestions-hr" />
+
+                                    <div class="search-suggestions">
+                                        <div
+                                            class="search-suggestion search-history"
+                                        >
+                                            <span
+                                                >how to be senior
+                                                developer</span
+                                            >
+                                            <a href="#">Remove</a>
+                                        </div>
+                                        <div
+                                            class="search-suggestion search-history"
+                                        >
+                                            <span>learn css html</span
+                                            ><a href="#">Remove</a>
+                                        </div>
+                                        <div class="search-suggestion">
+                                            <span>motogp 2019</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="search-buttons-container">
+                                        <input
+                                            type="submit"
+                                            value="Google Search"
+                                            class="search-button btn"
+                                        />
+                                        <input
+                                            type="submit"
+                                            value="I'm Feeling Lucky"
+                                            class="search-button btn"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div id="outter-search-buttons-container" class="form-group">
                             <div class="search-buttons-container">
                                 <input
                                     type="submit"
@@ -440,5 +480,6 @@
 
         <!-- PAGE SCRIPT -->
         <script src="./js/tooltip.js"></script>
+        <script src="./js/search-box.js"></script>
     </body>
 </html>
